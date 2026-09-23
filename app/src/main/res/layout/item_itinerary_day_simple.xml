@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:orientation="vertical" android:layout_marginBottom="12dp">
+    <TextView android:id="@+id/tv_day_header" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:text="Day 1 — Sacred Nashik" android:textColor="@color/primary" android:textSize="13sp"
+        android:textStyle="bold" android:background="@drawable/bg_blue_light_rounded"
+        android:padding="10dp" android:layout_marginBottom="6dp"/>
+    <LinearLayout android:id="@+id/activities_simple_container" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical"/>
+</LinearLayout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">नासिक ट्रिप प्लानर</string>
+    <string name="profile">प्रोफ़ाइल</string>
+    <string name="trips">यात्राएं</string>
+    <string name="visits">विज़िट</string>
+    <string name="reviews">समीक्षाएं</string>
+    <string name="edit_profile">✏️ प्रोफ़ाइल संपादित करें</string>
+    <string name="preferences">प्राथमिकताएं</string>
+    <string name="notifications">🔔 सूचनाएं</string>
+    <string name="language">🌐 भाषा</string>
+    <string name="currency">💰 मुद्रा</string>
+    <string name="ai_tuning">🤖 एआई ट्यूनिंग</string>
+    <string name="dark_mode">☀️ डार्क मोड</string>
+    <string name="more">अधिक</string>
+    <string name="my_trips">✈️ मेरी यात्राएं</string>
+    <string name="logout">🚪 लॉग आउट</string>
+    <string name="quick_actions">त्वरित कार्रवाई</string>
+    <string name="new_trip">नई यात्रा</string>
+    <string name="ai_chat">एआई चैट</string>
+    <string name="map">नक्शा</string>
+    <string name="routes">मार्ग</string>
+    <string name="upcoming_trips">आने वाली यात्राएं</string>
+    <string name="top_attractions">प्रमुख आकर्षण</string>
+    <string name="see_all">सभी देखें →</string>
+    <string name="view_map">नक्शा देखें →</string>
+</resources>

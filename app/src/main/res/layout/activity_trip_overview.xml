@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:background="@color/background"
+    android:forceDarkAllowed="false" tools:targetApi="q">
+    <LinearLayout android:id="@+id/hero_card" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:background="@color/primary" android:orientation="vertical"
+        android:paddingStart="20dp" android:paddingEnd="20dp" android:paddingTop="44dp" android:paddingBottom="0dp"
+        android:forceDarkAllowed="false">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="12dp"
+            android:background="@android:color/transparent">
+            <TextView android:id="@+id/iv_back" android:layout_width="36dp" android:layout_height="36dp"
+                android:gravity="center" android:text="←" android:textColor="@color/white" android:textSize="22sp"
+                android:background="@android:color/transparent"/>
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                android:gravity="center" android:text="Trip Overview" android:textColor="@color/white" android:textSize="17sp" android:textStyle="bold"
+                android:background="@android:color/transparent"/>
+            <ImageView android:id="@+id/iv_home" android:layout_width="36dp" android:layout_height="36dp"
+                android:gravity="center" android:src="@drawable/ic_home" android:padding="6dp"
+                android:background="@android:color/transparent" app:tint="@color/white"
+                android:contentDescription="Home" android:forceDarkAllowed="false"/>
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="16dp"
+            android:background="@android:color/transparent" android:forceDarkAllowed="false">
+            <ImageView android:id="@+id/iv_trip_icon" android:layout_width="40dp" android:layout_height="40dp"
+                android:layout_marginEnd="12dp" android:src="@drawable/ic_home"
+                android:background="@android:color/transparent" android:forceDarkAllowed="false"
+                app:tint="@color/white"/>
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical"
+                android:background="@android:color/transparent" android:forceDarkAllowed="false">
+                <TextView android:id="@+id/tv_trip_name" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Trip Name" android:textColor="@color/white" android:textSize="15sp" android:textStyle="bold"
+                    android:background="@android:color/transparent" android:forceDarkAllowed="false"/>
+                <TextView android:id="@+id/tv_trip_dates" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="📅 Dates" android:textColor="#BDFFFFFF" android:textSize="12sp" android:layout_marginTop="3dp"
+                    android:background="@android:color/transparent" android:forceDarkAllowed="false"/>
+            </LinearLayout>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:background="@drawable/bg_green_badge" android:paddingStart="10dp" android:paddingEnd="10dp"
+                android:paddingTop="4dp" android:paddingBottom="4dp" android:text="Active"
+                android:textColor="@color/white" android:textSize="11sp" android:textStyle="bold"
+                android:forceDarkAllowed="false"/>
+        </LinearLayout>
+    </LinearLayout>
+    <com.google.android.material.tabs.TabLayout android:id="@+id/tab_layout"
+        android:layout_width="match_parent" android:layout_height="48dp" android:background="@color/white"
+        app:tabIndicatorColor="@color/primary" app:tabSelectedTextColor="@color/primary"
+        app:tabTextColor="@color/text_hint" app:tabTextAppearance="@style/TabText"/>
+    <FrameLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+        <ScrollView android:id="@+id/tab_content_itinerary" android:layout_width="match_parent" android:layout_height="match_parent">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="16dp" android:paddingBottom="100dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="14dp">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                        android:text="Your Itinerary" android:textColor="@color/text_primary" android:textSize="15sp" android:textStyle="bold"/>
+                    <TextView android:id="@+id/btn_view_map" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="🗺️ View Map" android:textColor="@color/primary" android:textSize="12sp" android:textStyle="bold"/>
+                </LinearLayout>
+                <LinearLayout android:id="@+id/itinerary_container" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:orientation="vertical"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Trip Notes" android:textColor="@color/text_primary"
+                    android:textSize="14sp" android:textStyle="bold" android:layout_marginTop="16dp" android:layout_marginBottom="8dp"/>
+                <TextView android:id="@+id/tv_trip_notes" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:background="@drawable/bg_rounded_white" android:padding="14dp"
+                    android:text="Notes will appear here..." android:textColor="@color/text_secondary"
+                    android:textSize="12sp" android:lineSpacingMultiplier="1.5"/>
+            </LinearLayout>
+        </ScrollView>
+        <ScrollView android:id="@+id/tab_content_budget" android:layout_width="match_parent" android:layout_height="match_parent" android:visibility="gone">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="16dp" android:paddingBottom="100dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Budget Overview" android:textColor="@color/text_primary"
+                    android:textSize="15sp" android:textStyle="bold" android:layout_marginBottom="14dp"/>
+                <androidx.cardview.widget.CardView xmlns:cv="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    cv:cardCornerRadius="16dp" cv:cardElevation="2dp" android:layout_marginBottom="14dp">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="18dp">
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="12dp">
+                            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Estimated" android:textColor="@color/text_hint" android:textSize="12sp" android:layout_marginBottom="3dp"/>
+                                <TextView android:id="@+id/tv_estimated_total" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                    android:text="₹12,500" android:textColor="@color/text_primary" android:textSize="22sp" android:textStyle="bold"/>
+                            </LinearLayout>
+                            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Actual" android:textColor="@color/text_hint" android:textSize="12sp" android:layout_marginBottom="3dp"/>
+                                <TextView android:id="@+id/tv_actual_total" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                    android:text="₹11,200" android:textColor="@color/green" android:textSize="22sp" android:textStyle="bold"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                        <TextView android:id="@+id/tv_under_budget_amount" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:background="@drawable/bg_green_badge" android:paddingStart="12dp" android:paddingEnd="12dp"
+                            android:paddingTop="5dp" android:paddingBottom="5dp" android:text="Under Budget"
+                            android:textColor="@color/white" android:textSize="12sp" android:textStyle="bold"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+                <LinearLayout android:id="@+id/layout_budget_accommodation" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:background="@color/white" android:padding="13dp" android:layout_marginBottom="6dp">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="🏨 Accommodation" android:textColor="@color/text_primary" android:textSize="13sp"/>
+                    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical" android:gravity="end">
+                        <TextView android:id="@+id/tv_hotel_est" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="₹5,000 est." android:textColor="@color/text_hint" android:textSize="11sp"/>
+                        <TextView android:id="@+id/tv_hotel_act" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="₹4,800 act." android:textColor="@color/green" android:textSize="13sp" android:textStyle="bold"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:background="@color/white" android:padding="13dp" android:layout_marginBottom="6dp">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="🚂 Transport" android:textColor="@color/text_primary" android:textSize="13sp"/>
+                    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical" android:gravity="end">
+                        <TextView android:id="@+id/tv_transport_est" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="₹2,500 est." android:textColor="@color/text_hint" android:textSize="11sp"/>
+                        <TextView android:id="@+id/tv_transport_act" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="₹2,200 act." android:textColor="@color/green" android:textSize="13sp" android:textStyle="bold"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:background="@color/white" android:padding="13dp" android:layout_marginBottom="6dp">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="🍛 Food &amp; Drinks" android:textColor="@color/text_primary" android:textSize="13sp"/>
+                    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical" android:gravity="end">
+                        <TextView android:id="@+id/tv_food_est" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="₹2,000 est." android:textColor="@color/text_hint" android:textSize="11sp"/>
+                        <TextView android:id="@+id/tv_food_act" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="₹2,100 act." android:textColor="@color/red" android:textSize="13sp" android:textStyle="bold"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout android:id="@+id/layout_budget_activities" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:background="@color/white" android:padding="13dp" android:layout_marginBottom="6dp">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="🎯 Activities" android:textColor="@color/text_primary" android:textSize="13sp"/>
+                    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical" android:gravity="end">
+                        <TextView android:id="@+id/tv_activity_est" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="₹1,500 est." android:textColor="@color/text_hint" android:textSize="11sp"/>
+                        <TextView android:id="@+id/tv_activity_act" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="₹1,400 act." android:textColor="@color/green" android:textSize="13sp" android:textStyle="bold"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+        <ScrollView android:id="@+id/tab_content_packing" android:layout_width="match_parent" android:layout_height="match_parent" android:visibility="gone">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="16dp" android:paddingBottom="100dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="14dp">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                        android:text="Packing List" android:textColor="@color/text_primary" android:textSize="15sp" android:textStyle="bold"/>
+                    <TextView android:id="@+id/btn_add_packing" android:layout_width="30dp" android:layout_height="30dp"
+                        android:background="@drawable/bg_blue_light_rounded" android:gravity="center"
+                        android:text="+" android:textSize="18sp" android:textColor="@color/primary" android:textStyle="bold"/>
+                </LinearLayout>
+                <androidx.cardview.widget.CardView xmlns:cv="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    cv:cardCornerRadius="13dp" cv:cardElevation="2dp" android:layout_marginBottom="12dp">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="14dp">
+                        <TextView android:id="@+id/tv_packing_progress" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="0/8 items packed" android:textColor="@color/text_primary"
+                            android:textSize="13sp" android:textStyle="bold" android:layout_marginBottom="8dp"/>
+                        <ProgressBar android:id="@+id/progress_packing" android:layout_width="match_parent" android:layout_height="8dp"
+                            style="?android:attr/progressBarStyleHorizontal" android:max="8" android:progress="0"
+                            android:progressTint="@color/green" android:progressBackgroundTint="@color/border"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+                <LinearLayout android:id="@+id/packing_items_container" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:orientation="vertical"/>
+            </LinearLayout>
+        </ScrollView>
+    </FrameLayout>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:background="@color/white" android:orientation="horizontal"
+        android:padding="16dp" android:gravity="center_vertical">
+        <com.google.android.material.button.MaterialButton android:id="@+id/btn_share_trip"
+            android:layout_width="0dp" android:layout_height="50dp" android:layout_weight="2"
+            android:text="🔗 Share Trip" style="@style/NashikButton" android:layout_marginEnd="10dp"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btn_export_pdf"
+            android:layout_width="0dp" android:layout_height="50dp" android:layout_weight="1"
+            android:text="📄 Export" style="@style/NashikButtonOutline"/>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,70 @@
+===========================================================
+        NASHIK TRIP PLANNER - PROJECT OVERVIEW
+===========================================================
+
+1. PROJECT SUMMARY
+------------------
+Nashik Trip Planner is a comprehensive Android application designed to help tourists explore Nashik, the "Wine Capital of India." The app provides AI-powered trip planning, hotel booking assistance, real-time traffic route information, and spiritual/heritage spot discovery.
+
+2. CORE FEATURES & FUNCTIONALITIES
+----------------------------------
+
+A. SMART TRIP PLANNING
+   - Functionality: Users can create custom itineraries based on their mood (Pilgrimage, Wine Tour, Adventure), budget, and duration.
+   - Key File: TripCreationActivity.java
+   - Supporting File: NashikData.java (Logic to generate itineraries)
+
+B. AI TRAVEL ASSISTANT (CHATBOT)
+   - Functionality: A built-in AI assistant that answers questions about Nashik's food, history, and travel plans in detail.
+   - Key File: ChatFragment.java
+   - Supporting File: NashikData.java (Contains the AI response logic)
+
+C. HOTEL EXPLORER
+   - Functionality: Displays a curated list of hotels with high-quality images, ratings, amenities, and "Book Now" links.
+   - Key File: HotelsFragment.java
+   - Supporting File: NashikData.java (Provides the hotel data and image URLs)
+
+D. TRAFFIC & ROUTES
+   - Functionality: Shows common travel routes within the city, their distances, estimated time, and current traffic status (Low/Heavy). It also integrates with Google Maps.
+   - Key File: TrafficRoutesActivity.java
+   - Supporting File: Route.java (Model for route data)
+
+E. ATTRACTIONS DISCOVERY
+   - Functionality: Highlights top spots like Trimbakeshwar, Sula Vineyards, and Panchavati with ratings and entry fee info.
+   - Key File: HomeFragment.java
+
+3. TECHNICAL ARCHITECTURE (FILE-BY-FILE EXPLANATION)
+---------------------------------------------------
+
+- MainActivity.java:
+  The "Hub" of the app. It manages the bottom navigation bar and switches between Home, Hotels, Map, Chat, and Profile.
+
+- SplashActivity.java:
+  The entry screen with the app logo that appears when you first open the app.
+
+- NashikData.java:
+  The "Brain" of the project. This file stores all the data about hotels, attractions, and routes. It also contains the AI logic for answering user queries.
+
+- SessionManager.java:
+  Handles user login sessions and saves user preferences (like name and profile info) locally on the device.
+
+- layout/ (XML files):
+  Contains all the UI designs. For example, 'activity_main.xml' defines how the main screen looks.
+
+4. USER FLOW
+------------
+1. Splash Screen -> Login/Signup.
+2. Home Screen: Quick access to "New Trip," "AI Chat," and "Top Attractions."
+3. Hotels Tab: Browse hotels and click "Book Now" to find booking links.
+4. AI Chat Tab: Ask questions like "Where is the best Misal?" or "Plan a 1-day trip."
+5. Profile Tab: Edit user details and change language settings.
+
+5. EXTERNAL INTEGRATIONS
+------------------------
+- Google Maps API: Used for showing maps and providing navigation.
+- Glide Library: Used to load hotel and attraction images smoothly from the internet.
+- Material Design: Provides a modern, clean look and feel for buttons and cards.
+
+===========================================================
+             PRESENTATION READY - SIMPLE ENGLISH
+===========================================================

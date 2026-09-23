@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:background="@color/background">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:background="@color/primary" android:orientation="horizontal"
+        android:gravity="center_vertical" android:paddingStart="16dp" android:paddingEnd="16dp"
+        android:paddingTop="44dp" android:paddingBottom="14dp">
+        <TextView android:id="@+id/iv_back" android:layout_width="36dp" android:layout_height="36dp"
+            android:gravity="center" android:text="←" android:textColor="@color/white" android:textSize="22sp"/>
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+            android:gravity="center" android:text="Notifications" android:textColor="@color/white" android:textSize="17sp" android:textStyle="bold"/>
+        <View android:layout_width="36dp" android:layout_height="36dp"/>
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:gravity="center_vertical"
+        android:paddingStart="20dp" android:paddingEnd="16dp" android:paddingTop="12dp" android:paddingBottom="4dp">
+        <TextView android:id="@+id/tv_unread_count" android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:text="3 unread" android:textColor="@color/text_secondary" android:textSize="13sp"/>
+        <TextView android:id="@+id/btn_mark_all_read" android:layout_width="wrap_content" android:layout_height="34dp"
+            android:background="@drawable/bg_chip_outline" android:gravity="center"
+            android:paddingStart="12dp" android:paddingEnd="12dp" android:text="Mark read"
+            android:textColor="@color/primary" android:textSize="11sp" android:textStyle="bold" android:layout_marginEnd="8dp"/>
+        <TextView android:id="@+id/btn_clear_all" android:layout_width="wrap_content" android:layout_height="34dp"
+            android:background="@drawable/bg_rounded_white" android:gravity="center"
+            android:paddingStart="12dp" android:paddingEnd="12dp" android:text="Clear All"
+            android:textColor="@color/red" android:textSize="11sp" android:textStyle="bold"/>
+    </LinearLayout>
+    <ScrollView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:padding="16dp">
+            <TextView android:id="@+id/tv_today_header" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Today" android:textColor="@color/text_primary" android:textSize="15sp" android:textStyle="bold" android:layout_marginBottom="10dp"/>
+            <androidx.recyclerview.widget.RecyclerView android:id="@+id/rv_today"
+                android:layout_width="match_parent" android:layout_height="wrap_content" android:nestedScrollingEnabled="false"/>
+            <View android:id="@+id/notif_divider" android:layout_width="match_parent" android:layout_height="1dp"
+                android:background="@color/border" android:layout_marginTop="12dp" android:layout_marginBottom="12dp"/>
+            <TextView android:id="@+id/tv_earlier_header" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Earlier" android:textColor="@color/text_primary" android:textSize="15sp" android:textStyle="bold" android:layout_marginBottom="10dp"/>
+            <androidx.recyclerview.widget.RecyclerView android:id="@+id/rv_earlier"
+                android:layout_width="match_parent" android:layout_height="wrap_content" android:nestedScrollingEnabled="false"/>
+            <LinearLayout android:id="@+id/layout_empty" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:gravity="center" android:padding="40dp" android:visibility="gone">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="🔔" android:textSize="56sp" android:layout_marginBottom="16dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="No notifications" android:textColor="@color/text_primary"
+                    android:textSize="17sp" android:textStyle="bold" android:layout_marginBottom="8dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="You're all caught up! New trip alerts and tips will appear here."
+                    android:textColor="@color/text_hint" android:textSize="13sp" android:gravity="center"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

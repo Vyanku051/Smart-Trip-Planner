@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:background="@color/background"
+    tools:targetApi="q" android:forceDarkAllowed="false">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:background="@drawable/bg_primary_header" android:orientation="vertical"
+        android:paddingStart="20dp" android:paddingEnd="20dp" android:paddingTop="44dp" android:paddingBottom="14dp"
+        xmlns:tools="http://schemas.android.com/tools" tools:targetApi="q" android:forceDarkAllowed="false">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="12dp"
+            android:background="@android:color/transparent">
+            <TextView android:id="@+id/tv_title_map" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                android:text="Nashik Map" android:textColor="@color/white" android:textSize="17sp" android:textStyle="bold"
+                android:background="@android:color/transparent" android:clickable="true" android:focusable="true"/>
+            <TextView android:id="@+id/btn_full_map" android:layout_width="wrap_content" android:layout_height="36dp"
+                android:background="@drawable/bg_transparent_white" android:gravity="center"
+                android:paddingStart="14dp" android:paddingEnd="14dp"
+                android:text="Full Map" android:textColor="@color/white" android:textSize="12sp" android:textStyle="bold"
+                android:forceDarkAllowed="false"/>
+        </LinearLayout>
+    </LinearLayout>
+    <!-- Removed the empty map area and zoom buttons to move functionality upward as requested -->
+
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/rv_categories"
+        android:layout_width="match_parent" android:layout_height="50dp"
+        android:background="@color/white" android:paddingStart="14dp" android:paddingEnd="14dp" android:clipToPadding="false"/>
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/rv_attractions_list"
+        android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"
+        android:paddingStart="14dp" android:paddingEnd="14dp" android:paddingTop="8dp" android:paddingBottom="8dp" android:clipToPadding="false"/>
+</LinearLayout>

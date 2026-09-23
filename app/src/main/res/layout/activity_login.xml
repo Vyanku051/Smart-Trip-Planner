@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:background="@color/primary">
+    <FrameLayout android:layout_width="match_parent" android:layout_height="180dp">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+            android:gravity="center" android:orientation="vertical">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="✈️" android:textSize="40sp" android:layout_marginBottom="8dp"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Nashik Smart Trip" android:textColor="@color/white"
+                android:textSize="18sp" android:textStyle="bold"/>
+        </LinearLayout>
+    </FrameLayout>
+    <ScrollView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"
+        android:background="@drawable/bg_white_card" android:fillViewport="true">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:padding="24dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Welcome Back!" android:textColor="@color/text_primary"
+                android:textSize="26sp" android:textStyle="bold" android:layout_marginBottom="6dp"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Sign in to plan your Nashik trip"
+                android:textColor="@color/text_secondary" android:textSize="13sp" android:layout_marginBottom="20dp"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Email Address" android:textColor="@color/text_primary"
+                android:textSize="13sp" android:textStyle="bold" android:layout_marginBottom="8dp"/>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="52dp"
+                android:background="@drawable/bg_input_field" android:orientation="horizontal"
+                android:gravity="center_vertical" android:paddingStart="14dp" android:paddingEnd="14dp"
+                android:layout_marginBottom="14dp">
+                <EditText android:id="@+id/et_email" android:layout_width="0dp" android:layout_height="match_parent"
+                    android:layout_weight="1" android:background="@null" android:hint="your@email.com"
+                    android:inputType="textEmailAddress" android:textColor="@color/text_primary" android:textSize="14sp"
+                    android:textColorHint="@color/text_hint"/>
+            </LinearLayout>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Password" android:textColor="@color/text_primary"
+                android:textSize="13sp" android:textStyle="bold" android:layout_marginBottom="8dp"/>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="52dp"
+                android:background="@drawable/bg_input_field" android:orientation="horizontal"
+                android:gravity="center_vertical" android:paddingStart="14dp" android:paddingEnd="14dp">
+                <EditText android:id="@+id/et_password" android:layout_width="0dp" android:layout_height="match_parent"
+                    android:layout_weight="1" android:background="@null" android:hint="Enter password"
+                    android:inputType="textPassword" android:textColor="@color/text_primary" android:textSize="14sp"
+                    android:textColorHint="@color/text_hint"/>
+            </LinearLayout>
+            <View android:id="@+id/progress_login" android:layout_width="match_parent" android:layout_height="3dp"
+                android:background="@color/primary" android:visibility="gone" android:layout_marginTop="4dp"/>
+            <TextView android:id="@+id/tv_forgot" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_gravity="end" android:paddingTop="10dp" android:paddingBottom="10dp"
+                android:text="Forgot password?" android:textColor="@color/primary"
+                android:textSize="13sp" android:textStyle="bold" android:layout_marginBottom="4dp"/>
+            <com.google.android.material.button.MaterialButton android:id="@+id/btn_login"
+                android:layout_width="match_parent" android:layout_height="52dp"
+                android:text="Login" style="@style/NashikButton" android:layout_marginBottom="20dp"/>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="16dp">
+                <View android:layout_width="0dp" android:layout_height="1dp" android:layout_weight="1" android:background="@color/border"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="  or  " android:textColor="@color/text_hint" android:textSize="12sp"/>
+                <View android:layout_width="0dp" android:layout_height="1dp" android:layout_weight="1" android:background="@color/border"/>
+            </LinearLayout>
+            <TextView android:id="@+id/tv_google_login" android:layout_width="match_parent" android:layout_height="52dp"
+                android:gravity="center" android:background="@drawable/bg_outline_primary"
+                android:text="G  Continue with Google" android:textColor="@color/text_primary"
+                android:textSize="14sp" android:textStyle="bold" android:layout_marginBottom="10dp"/>
+            <TextView android:id="@+id/tv_facebook_login" android:layout_width="match_parent" android:layout_height="52dp"
+                android:gravity="center" android:background="@drawable/bg_outline_primary"
+                android:text="f  Continue with Facebook" android:textColor="@color/text_primary"
+                android:textSize="14sp" android:textStyle="bold"/>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:gravity="center" android:orientation="horizontal" android:layout_marginTop="20dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Don't have an account?  " android:textColor="@color/text_hint" android:textSize="13sp"/>
+                <TextView android:id="@+id/tv_create_account" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Create an account" android:textColor="@color/primary"
+                    android:textSize="13sp" android:textStyle="bold"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

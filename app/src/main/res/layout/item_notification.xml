@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:orientation="horizontal" android:gravity="center_vertical"
+    android:background="@color/white" android:padding="13dp" android:layout_marginBottom="8dp">
+    <FrameLayout android:layout_width="40dp" android:layout_height="40dp" android:layout_marginEnd="12dp">
+        <View android:id="@+id/notif_icon_bg" android:layout_width="match_parent" android:layout_height="match_parent"
+            android:background="@drawable/bg_primary_rounded"/>
+        <TextView android:id="@+id/tv_notif_emoji" android:layout_width="match_parent" android:layout_height="match_parent"
+            android:gravity="center" android:text="🔔" android:textSize="17sp"/>
+    </FrameLayout>
+    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+        <TextView android:id="@+id/tv_notif_title" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Notification title" android:textColor="@color/text_primary"
+            android:textSize="12sp" android:lineSpacingMultiplier="1.4" android:layout_marginBottom="3dp"/>
+        <TextView android:id="@+id/tv_notif_time" android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="10:30 AM" android:textColor="@color/text_hint" android:textSize="10sp"/>
+    </LinearLayout>
+    <View android:id="@+id/unread_dot" android:layout_width="8dp" android:layout_height="8dp"
+        android:background="@drawable/bg_primary_rounded" android:layout_marginStart="8dp" android:layout_marginEnd="4dp"/>
+    <TextView android:id="@+id/btn_delete_notif" android:layout_width="28dp" android:layout_height="28dp"
+        android:gravity="center" android:text="✕" android:textColor="@color/text_hint" android:textSize="14sp"/>
+</LinearLayout>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:background="@color/background">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:background="@color/primary" android:orientation="horizontal"
+        android:gravity="center_vertical" android:paddingStart="16dp" android:paddingEnd="16dp"
+        android:paddingTop="44dp" android:paddingBottom="14dp">
+        <TextView android:id="@+id/iv_back" android:layout_width="36dp" android:layout_height="36dp"
+            android:gravity="center" android:text="←" android:textColor="@color/white" android:textSize="22sp"/>
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+            android:gravity="center" android:text="Traffic &amp; Routes" android:textColor="@color/white" android:textSize="17sp" android:textStyle="bold"/>
+        <View android:layout_width="36dp" android:layout_height="36dp"/>
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:background="@drawable/bg_notification_unread" android:padding="14dp"
+        android:orientation="horizontal" android:gravity="center_vertical"
+        android:layout_margin="16dp">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="⚠️" android:textSize="18sp" android:layout_marginEnd="10dp"/>
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="🚧 Road work on Mumbai-Nashik Expressway near Ghoti"
+                android:textColor="@color/text_primary" android:textSize="12sp" android:textStyle="bold" android:layout_marginBottom="2dp"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Expect 20–30 min delays. Use Kasara Ghat as alternate."
+                android:textColor="@color/text_secondary" android:textSize="11sp"/>
+        </LinearLayout>
+    </LinearLayout>
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="Recommended Routes" android:textColor="@color/text_primary"
+        android:textSize="15sp" android:textStyle="bold" android:layout_marginStart="20dp" android:layout_marginBottom="8dp"/>
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/rv_routes"
+        android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"
+        android:paddingStart="16dp" android:paddingEnd="16dp" android:paddingBottom="16dp" android:clipToPadding="false"/>
+</LinearLayout>

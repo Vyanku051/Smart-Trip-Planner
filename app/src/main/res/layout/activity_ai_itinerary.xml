@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:background="@color/background"
+    android:forceDarkAllowed="false" tools:targetApi="q">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:background="@color/primary" android:orientation="horizontal"
+        android:gravity="center_vertical" android:paddingStart="16dp" android:paddingEnd="16dp"
+        android:paddingTop="44dp" android:paddingBottom="14dp"
+        android:forceDarkAllowed="false" tools:targetApi="q">
+        <TextView android:id="@+id/iv_back" android:layout_width="36dp" android:layout_height="36dp"
+            android:gravity="center" android:text="←" android:textColor="@color/white" android:textSize="22sp"
+            android:background="@android:color/transparent"/>
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+            android:gravity="center" android:text="AI Itinerary" android:textColor="@color/white" android:textSize="17sp" android:textStyle="bold"
+            android:background="@android:color/transparent"/>
+        <TextView android:id="@+id/btn_regenerate" android:layout_width="36dp" android:layout_height="36dp"
+            android:background="@drawable/bg_transparent_white" android:gravity="center" android:text="🔄" android:textSize="16sp"/>
+    </LinearLayout>
+    <LinearLayout android:id="@+id/layout_loading" android:layout_width="match_parent" android:layout_height="0dp"
+        android:layout_weight="1" android:gravity="center" android:orientation="vertical" android:padding="32dp">
+        <ProgressBar android:layout_width="56dp" android:layout_height="56dp"
+            android:indeterminateTint="@color/primary" android:layout_marginBottom="20dp"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="AI is crafting your Nashik itinerary…" android:textColor="@color/text_primary"
+            android:textSize="17sp" android:textStyle="bold" android:gravity="center" android:layout_marginBottom="8dp"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Analyzing best Nashik experiences for you..." android:textColor="@color/text_secondary"
+            android:textSize="13sp" android:gravity="center" android:layout_marginBottom="24dp"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="✅ Finding top Nashik attractions..." android:textColor="@color/green" android:textSize="13sp" android:layout_marginBottom="8dp"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="✅ Optimizing routes..." android:textColor="@color/green" android:textSize="13sp" android:layout_marginBottom="8dp"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="⏳ Finalizing your schedule..." android:textColor="@color/text_hint" android:textSize="13sp"/>
+    </LinearLayout>
+    <LinearLayout android:id="@+id/layout_content" android:layout_width="match_parent" android:layout_height="0dp"
+        android:layout_weight="1" android:orientation="vertical" android:visibility="gone">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:background="@color/primary" android:orientation="vertical" android:gravity="center"
+            android:paddingStart="20dp" android:paddingEnd="20dp" android:paddingBottom="16dp"
+            android:forceDarkAllowed="false" tools:targetApi="q">
+            <ImageView android:id="@+id/iv_trip_icon" android:layout_width="48dp" android:layout_height="48dp"
+                android:layout_marginBottom="8dp" android:src="@drawable/ic_home"
+                android:background="@android:color/transparent" android:forceDarkAllowed="false"
+                app:tint="@color/white"/>
+            <TextView android:id="@+id/tv_trip_title" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Nashik Pilgrimage Tour" android:textColor="@color/white" android:textSize="17sp" android:textStyle="bold" android:gravity="center"
+                android:background="@android:color/transparent" android:forceDarkAllowed="false"/>
+            <TextView android:id="@+id/tv_trip_mood" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="🙏 Pilgrimage" android:textColor="#BDFFFFFF" android:textSize="13sp" android:layout_marginTop="4dp"
+                android:background="@android:color/transparent" android:forceDarkAllowed="false"/>
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginTop="12dp"
+                android:background="@android:color/transparent" android:forceDarkAllowed="false">
+                <TextView android:id="@+id/tv_days_count" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:background="@drawable/bg_transparent_white" android:paddingStart="12dp" android:paddingEnd="12dp"
+                    android:paddingTop="5dp" android:paddingBottom="5dp" android:text="3 Days"
+                    android:textColor="@color/white" android:textSize="12sp" android:textStyle="bold" android:layout_marginEnd="12dp"
+                    android:forceDarkAllowed="false"/>
+                <TextView android:id="@+id/tv_budget_info" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:background="@drawable/bg_transparent_white" android:paddingStart="12dp" android:paddingEnd="12dp"
+                    android:paddingTop="5dp" android:paddingBottom="5dp" android:text="₹8,000"
+                    android:textColor="@color/white" android:textSize="12sp" android:textStyle="bold"
+                    android:forceDarkAllowed="false"/>
+            </LinearLayout>
+        </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView android:id="@+id/rv_itinerary_days"
+            android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"
+            android:padding="16dp" android:clipToPadding="false"/>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:background="@color/white" android:orientation="horizontal" android:padding="16dp" android:gravity="center_vertical">
+            <com.google.android.material.button.MaterialButton android:id="@+id/btn_edit_itinerary"
+                android:layout_width="0dp" android:layout_height="50dp" android:layout_weight="1"
+                android:text="✏️ Edit" style="@style/NashikButtonOutline" android:layout_marginEnd="10dp"/>
+            <com.google.android.material.button.MaterialButton android:id="@+id/btn_accept_itinerary"
+                android:layout_width="0dp" android:layout_height="50dp" android:layout_weight="2"
+                android:text="✅ Accept Itinerary" style="@style/NashikButtonGreen"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

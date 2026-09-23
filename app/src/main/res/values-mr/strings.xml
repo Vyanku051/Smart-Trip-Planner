@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">नाशिक ट्रिप प्लॅनर</string>
+    <string name="profile">प्रोफाइल</string>
+    <string name="trips">सहली</string>
+    <string name="visits">भेटी</string>
+    <string name="reviews">पुनरावलोकने</string>
+    <string name="edit_profile">✏️ प्रोफाइल संपादित करा</string>
+    <string name="preferences">पसंती</string>
+    <string name="notifications">🔔 सूचना</string>
+    <string name="language">🌐 भाषा</string>
+    <string name="currency">💰 चलन</string>
+    <string name="ai_tuning">🤖 एआय ट्यूनिंग</string>
+    <string name="dark_mode">☀️ डार्क मोड</string>
+    <string name="more">अधिक</string>
+    <string name="my_trips">✈️ माझ्या सहली</string>
+    <string name="logout">🚪 लॉग आउट</string>
+    <string name="quick_actions">त्वरित क्रिया</string>
+    <string name="new_trip">नवीन सहल</string>
+    <string name="ai_chat">एआय चॅट</string>
+    <string name="map">नकाशा</string>
+    <string name="routes">मार्ग</string>
+    <string name="upcoming_trips">येणाऱ्या सहली</string>
+    <string name="top_attractions">प्रमुख आकर्षणे</string>
+    <string name="see_all">सर्व पहा →</string>
+    <string name="view_map">नकाशा पहा →</string>
+</resources>

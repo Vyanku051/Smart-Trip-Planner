@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Nashik Trip Planner</string>
+    <string name="profile">Profile</string>
+    <string name="trips">Trips</string>
+    <string name="visits">Visits</string>
+    <string name="reviews">Reviews</string>
+    <string name="edit_profile">✏️ Edit Profile</string>
+    <string name="preferences">Preferences</string>
+    <string name="notifications">🔔 Notifications</string>
+    <string name="language">🌐 Language</string>
+    <string name="currency">💰 Currency</string>
+    <string name="ai_tuning">🤖 AI Tuning</string>
+    <string name="dark_mode">☀️ Dark Mode</string>
+    <string name="more">More</string>
+    <string name="my_trips">✈️ My Trips</string>
+    <string name="logout">🚪 Logout</string>
+    <string name="quick_actions">Quick Actions</string>
+    <string name="new_trip">New Trip</string>
+    <string name="ai_chat">AI Chat</string>
+    <string name="map">Map</string>
+    <string name="routes">Routes</string>
+    <string name="upcoming_trips">Upcoming Trips</string>
+    <string name="top_attractions">Top Attractions</string>
+    <string name="see_all">See all →</string>
+    <string name="view_map">View map →</string>
+</resources>
